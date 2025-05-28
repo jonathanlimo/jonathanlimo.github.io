@@ -1629,6 +1629,56 @@ input, select, textarea {
 
 		}
 
+/* Style for the Education section */
+#education {
+    background-color: #FFFFFF; /* White background */
+    color: #000000;          /* Black text color for the entire section */
+    padding: 2em;            /* Add some padding around the content */
+    border-radius: 8px;      /* Slightly rounded corners */
+    margin-bottom: 2em;      /* Space below the section */
+}
+
+/* Ensure headings inside the section are black */
+#education h2,
+#education h3 {
+    color: #000000;
+}
+
+/* Ensure paragraph text inside the section is black */
+#education p {
+    color: #000000;
+}
+
+/* Ensure list items and their content are black */
+#education ul,
+#education li {
+    color: #000000;
+}
+
+/* Make strong/bold text black if it's not already */
+#education strong {
+    color: #000000;
+}
+
+/* Style for small text, ensure it's black and maybe a little lighter */
+#education small {
+    color: #333333; /* A slightly softer black for secondary text */
+}
+
+/* You might need to adjust styles for links if they are not black by default */
+#education a {
+    color: #0000FF; /* Example: Blue for links, change as desired */
+    text-decoration: underline; /* Add underline for links */
+}
+
+/* If you have tables, ensure their text is black */
+#education table,
+#education th,
+#education td {
+    color: #000000;
+    border-color: #DDDDDD; /* Light gray border for tables */
+}
+
 /* Footer */
 
 	#footer {
