@@ -1629,56 +1629,6 @@ input, select, textarea {
 
 		}
 
-/* Style for the Education section */
-#education {
-    background-color: #FFFFFF; /* White background */
-    color: #000000;          /* Black text color for the entire section */
-    padding: 2em;            /* Add some padding around the content */
-    border-radius: 8px;      /* Slightly rounded corners */
-    margin-bottom: 2em;      /* Space below the section */
-}
-
-/* Ensure headings inside the section are black */
-#education h2,
-#education h3 {
-    color: #000000;
-}
-
-/* Ensure paragraph text inside the section is black */
-#education p {
-    color: #000000;
-}
-
-/* Ensure list items and their content are black */
-#education ul,
-#education li {
-    color: #000000;
-}
-
-/* Make strong/bold text black if it's not already */
-#education strong {
-    color: #000000;
-}
-
-/* Style for small text, ensure it's black and maybe a little lighter */
-#education small {
-    color: #333333; /* A slightly softer black for secondary text */
-}
-
-/* You might need to adjust styles for links if they are not black by default */
-#education a {
-    color: #0000FF; /* Example: Blue for links, change as desired */
-    text-decoration: underline; /* Add underline for links */
-}
-
-/* If you have tables, ensure their text is black */
-#education table,
-#education th,
-#education td {
-    color: #000000;
-    border-color: #DDDDDD; /* Light gray border for tables */
-}
-
 /* Footer */
 
 	#footer {
@@ -1715,3 +1665,88 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* (Existing main.css content goes here, unchanged, including all the rules you provided) */
+
+/*
+    ... (All the existing CSS for Dimension by HTML5 UP) ...
+*/
+
+/* --- Custom Styles for Education Section --- */
+
+#education {
+    background-color: #FFFFFF; /* White background */
+    color: #000000;          /* Black text color for the entire section */
+    padding: 4.5rem 2.5rem 1.5rem 2.5rem; /* Match existing article padding for consistency */
+    border-radius: 4px;      /* Match existing article border-radius */
+    margin-bottom: 2rem;     /* Space below the section */
+    /* If you also want to remove the semi-transparent overlay from the article, add: */
+    /* background-color: rgba(255, 255, 255, 1); */ /* Fully opaque white */
+}
+
+/* Ensure all text elements inside the #education section are black */
+#education h2,
+#education h3,
+#education p,
+#education ul,
+#education li,
+#education strong,
+#education small,
+#education table,
+#education th,
+#education td {
+    color: #000000;
+}
+
+/* Override link color to black if they are white by default */
+#education a {
+    color: #0000FF; /* Or a darker color like #3333CC, or simply #000000 if no distinction needed */
+    border-bottom: dotted 1px rgba(0, 0, 0, 0.5); /* Adjust link underline for black text */
+}
+
+#education a:hover {
+    border-bottom-color: transparent;
+}
+
+/* Adjust the border for the major heading within this section */
+#education h2.major {
+    border-bottom: solid 1px #000000; /* Black border for the heading underline */
+}
+
+/* Adjust horizontal rule color if desired */
+#education hr {
+    border-bottom: solid 1px #999999; /* A darker grey for separator */
+}
+
+/* If you have tables, ensure their text and borders adapt to the new color scheme */
+#education table tbody tr {
+    border: solid 1px #CCCCCC; /* Lighter border for table rows */
+    border-left: 0;
+    border-right: 0;
+}
+
+#education table tbody tr:nth-child(2n + 1) {
+    background-color: rgba(0, 0, 0, 0.05); /* Slightly darker stripe for alt rows */
+}
+
+#education table th {
+    color: #000000; /* Table header text black */
+}
+
+#education table thead {
+    border-bottom: solid 2px #000000; /* Black border for table header */
+}
+
+#education table tfoot {
+    border-top: solid 2px #000000; /* Black border for table footer */
+}
+
+#education table.alt tbody tr td {
+    border: solid 1px #CCCCCC;
+    border-left-width: 0;
+    border-top-width: 0;
+}
+
+#education table.alt tbody tr:first-child td {
+    border-top-width: 1px;
+}
