@@ -1666,87 +1666,97 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* (Existing main.css content goes here, unchanged, including all the rules you provided) */
-
-/*
-    ... (All the existing CSS for Dimension by HTML5 UP) ...
-*/
-
-/* --- Custom Styles for Education Section --- */
+/* --- NEW & REFINED Custom Styles for Education Section --- */
 
 #education {
-    background-color: #FFFFFF; /* White background */
-    color: #000000;          /* Black text color for the entire section */
-    padding: 4.5rem 2.5rem 1.5rem 2.5rem; /* Match existing article padding for consistency */
+    /* Set a solid white background, overriding any semi-transparent defaults */
+    background-color: #FFFFFF !important; 
+    
+    /* Ensure opacity is 1 when the article is active (its displayed state) */
+    opacity: 1 !important; 
+
+    /* Text colors - ensure everything inside is black */
+    color: #000000 !important;          
+    
+    /* Maintain padding and border-radius for consistency with other articles */
+    padding: 4.5rem 2.5rem 1.5rem 2.5rem; /* Match existing article padding */
     border-radius: 4px;      /* Match existing article border-radius */
     margin-bottom: 2rem;     /* Space below the section */
-    /* If you also want to remove the semi-transparent overlay from the article, add: */
-    /* background-color: rgba(255, 255, 255, 1); */ /* Fully opaque white */
 }
 
-/* Ensure all text elements inside the #education section are black */
+/* Ensure all text elements inside the #education section are black, using !important for strong override */
 #education h2,
 #education h3,
 #education p,
 #education ul,
 #education li,
-#education strong,
-#education small,
-#education table,
-#education th,
-#education td {
-    color: #000000;
+#education strong {
+    color: #000000 !important;
 }
 
-/* Override link color to black if they are white by default */
+/* Specific styling for small text (can be a slightly softer black) */
+#education small {
+    color: #333333 !important; /* A slightly softer black for secondary text */
+}
+
+/* Adjust link color for readability on white background */
 #education a {
-    color: #0000FF; /* Or a darker color like #3333CC, or simply #000000 if no distinction needed */
-    border-bottom: dotted 1px rgba(0, 0, 0, 0.5); /* Adjust link underline for black text */
+    color: #0000FF !important; /* Or a darker color like #0000CC, or simply #000000 if no distinction needed */
+    border-bottom-color: rgba(0, 0, 0, 0.5) !important; /* Adjust link underline for black text */
 }
 
 #education a:hover {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
 }
 
 /* Adjust the border for the major heading within this section */
 #education h2.major {
-    border-bottom: solid 1px #000000; /* Black border for the heading underline */
+    border-bottom-color: #000000 !important; /* Black border for the heading underline */
 }
 
-/* Adjust horizontal rule color if desired */
+/* Adjust horizontal rule color */
 #education hr {
-    border-bottom: solid 1px #999999; /* A darker grey for separator */
+    border-bottom-color: #DDDDDD !important; /* Light grey for separator */
 }
 
-/* If you have tables, ensure their text and borders adapt to the new color scheme */
+/* Table specific overrides */
+#education table,
+#education th,
+#education td {
+    color: #000000 !important;
+}
+
 #education table tbody tr {
-    border: solid 1px #CCCCCC; /* Lighter border for table rows */
-    border-left: 0;
-    border-right: 0;
+    border-color: #CCCCCC !important; 
+    border-left: 0 !important;
+    border-right: 0 !important;
 }
 
 #education table tbody tr:nth-child(2n + 1) {
-    background-color: rgba(0, 0, 0, 0.05); /* Slightly darker stripe for alt rows */
-}
-
-#education table th {
-    color: #000000; /* Table header text black */
+    background-color: rgba(0, 0, 0, 0.05) !important; /* Slightly darker stripe for alt rows */
 }
 
 #education table thead {
-    border-bottom: solid 2px #000000; /* Black border for table header */
+    border-bottom-color: #000000 !important;
 }
 
 #education table tfoot {
-    border-top: solid 2px #000000; /* Black border for table footer */
+    border-top-color: #000000 !important;
 }
 
 #education table.alt tbody tr td {
-    border: solid 1px #CCCCCC;
-    border-left-width: 0;
-    border-top-width: 0;
+    border-color: #CCCCCC !important;
+    border-left-width: 0 !important;
+    border-top-width: 0 !important;
 }
 
 #education table.alt tbody tr:first-child td {
-    border-top-width: 1px;
+    border-top-width: 1px !important;
+}
+
+/* If you have any image overlays/filters in #education, make sure to disable them */
+#education .image:before {
+    background-image: none !important; /* Remove overlay image */
+    background-color: transparent !important; /* Remove overlay color */
+    opacity: 1 !important; /* Ensure image is fully visible */
 }
